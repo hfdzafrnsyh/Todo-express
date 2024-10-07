@@ -1,4 +1,4 @@
-
+'use strict'
 const  Model  = require('../database/models/index');
 const Users = Model.users;
 
