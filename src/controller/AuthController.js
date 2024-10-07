@@ -30,7 +30,6 @@ module.exports.register = async (req,res,next) => {
             let request = {
                 name : data.name,
                 email : data.email,
-                photo : data.phone,
                 phone : data.phone,
                 password : bcrypt.hashSync(data.password,10)
             }
@@ -98,12 +97,9 @@ module.exports.login = async (req,res,next) => {
                     email : user.email
                 })
 
-
                 res.status(200).json({
-                        data : {
-                            user : hasLogin,
-                            token : token
-                        }
+                        data : hasLogin,
+                         token : token
                     })
         }else{
             res.status(400).json({

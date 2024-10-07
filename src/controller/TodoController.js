@@ -1,3 +1,5 @@
+'use strict'
+
 const Model = require('../database/models/index');
 const Todo = Model.todo;
 const jwt = require('jsonwebtoken');
